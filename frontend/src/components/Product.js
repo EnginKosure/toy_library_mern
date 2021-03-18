@@ -3,12 +3,13 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { Card } from 'react-bootstrap'
 import Rating from './Rating'
+import BarcodeGenerator from '../screens/BarcodeGenerator'
 
 const Product = ({ product }) => {
   return (
-    <Card  className='my-3 p-3 rounded product-cart'>
+    <Card className='my-3 p-3 rounded product-cart'>
       <Link to={`/product/${product._id}`}>
-        <Card.Img src={product.image} className='product-img' variant='top'/>
+        <Card.Img src={product.image} className='product-img' variant='top' />
       </Link>
 
       <Card.Body>
@@ -25,8 +26,10 @@ const Product = ({ product }) => {
           />
         </Card.Text>
 
-        <Card.Text  className='product-price' as='h5'>${product.price}</Card.Text>
+        <Card.Text className='product-price' as='h5'>${product.price}</Card.Text>
       </Card.Body>
+      <BarcodeGenerator />
+
     </Card>
   )
 }

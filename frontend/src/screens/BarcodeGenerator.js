@@ -7,7 +7,8 @@ const BarcodeGenerator = ({ location, history }) => {
         background: "#f5f5f5",
         marginTop: "20px",
         marginBottom: "20px",
-        width: 1
+        width: 0.6,
+        height: 100,
     };
 
     const [value, setValue] = useState("https://reactjs.org");
@@ -24,7 +25,7 @@ const BarcodeGenerator = ({ location, history }) => {
 
     return (
         <div className="scanner">
-            <h2>Generate Barcode</h2>
+            <h6>Generate Barcode</h6>
             <TextField
                 label="Enter value or name here"
                 value={value}
