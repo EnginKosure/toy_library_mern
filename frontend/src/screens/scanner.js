@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Barcode from "react-hooks-barcode";
 
-const Scanner = ({ location, history }) => {
+const BarcodeGenerator = ({ location, history }) => {
     const config = {
         background: "#f5f5f5",
         marginTop: "20px",
@@ -24,9 +24,9 @@ const Scanner = ({ location, history }) => {
 
     return (
         <div className="scanner">
-            <h2>React Hooks Barcode Demo</h2>
+            <h2>Generate Barcode</h2>
             <TextField
-                label="Enter value here"
+                label="Enter value or name here"
                 value={value}
                 onChange={e => setValue(e.target.value)}
                 margin="normal"
@@ -39,7 +39,7 @@ const Scanner = ({ location, history }) => {
     );
 }
 
-export default Scanner;
+export default BarcodeGenerator;
 
 /* other available options
 {
