@@ -1,12 +1,46 @@
+import React, { useState, useEffect } from "react";
+import TextField from "@material-ui/core/TextField";
 import Barcode from "react-hooks-barcode";
 
-const config = {
-    background: "#f5f5f5",
-    marginTop: "20px",
-    marginBottom: "20px",
-    fontOptions: "italic",
-    width: 2
-};
+const Scanner = ({ location, history }) => {
+    const config = {
+        background: "#f5f5f5",
+        marginTop: "20px",
+        marginBottom: "20px",
+        width: 1
+    };
+
+    const [value, setValue] = useState("https://reactjs.org");
+    const [message, setMessage] = useState(null);
+
+    useEffect(
+        () => {
+            if (!value) {
+                setMessage("Please enter a value");
+            } else setMessage(null);
+        },
+        [value]
+    );
+
+    return (
+        <div className="scanner">
+            <h2>React Hooks Barcode Demo</h2>
+            <TextField
+                label="Enter value here"
+                value={value}
+                onChange={e => setValue(e.target.value)}
+                margin="normal"
+            />
+            <br />
+            <br />
+            <Barcode value={value} {...config} />
+            {message && <p>{message}</p>}
+        </div>
+    );
+}
+
+export default Scanner;
+
 /* other available options
 {
     width: 2,
@@ -28,4 +62,3 @@ const config = {
     marginRight: undefined
   }
   */
-<Barcode value="https://reactjs.org/" {...config} />;
