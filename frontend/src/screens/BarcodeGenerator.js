@@ -9,6 +9,7 @@ const BarcodeGenerator = ({ location, history, barcode }) => {
         marginBottom: "20px",
         width: 1,
         height: 40,
+        fontSize: 12,
     };
 
     // const [value, setValue] = useState(barcode);
