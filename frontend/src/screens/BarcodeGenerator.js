@@ -7,7 +7,7 @@ const BarcodeGenerator = ({ location, history }) => {
         background: "#f5f5f5",
         marginTop: "20px",
         marginBottom: "20px",
-        width: 0.6,
+        width: 1,
         height: 100,
     };
 
