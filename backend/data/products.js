@@ -87,6 +87,7 @@ const products = [
     countInStock: 10,
     rating: 4.5,
     numReviews: 12,
+    barcode: 'puzzle1',
   },
   {
     name: 'CAMELIA',
@@ -99,6 +100,7 @@ const products = [
     countInStock: 7,
     rating: 4.0,
     numReviews: 8,
+    barcode: 'puzzle2',
   },
   {
     name: 'BOUTONDE_EARRINGS',
@@ -111,6 +113,7 @@ const products = [
     countInStock: 5,
     rating: 3,
     numReviews: 12,
+    barcode: 'puzzle3',
   },
   {
     name: 'BOUTON_EARRINGS',
@@ -123,6 +126,7 @@ const products = [
     countInStock: 11,
     rating: 5,
     numReviews: 12,
+    barcode: 'puzzle4',
   },
   {
     name: 'CAMELIA_JEWELRY',
@@ -135,6 +139,7 @@ const products = [
     countInStock: 7,
     rating: 3.5,
     numReviews: 10,
+    barcode: 'puzzle5',
   },
   {
     name: 'PLUME_EARRINGS',
@@ -147,6 +152,7 @@ const products = [
     countInStock: 0,
     rating: 4,
     numReviews: 12,
+    barcode: 'puzzle6',
   },
 ]
 
