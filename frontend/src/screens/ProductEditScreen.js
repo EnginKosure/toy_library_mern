@@ -16,6 +16,7 @@ const ProductEditScreen = ({ match, history }) => {
   const [price, setPrice] = useState(0)
   const [image, setImage] = useState('')
   const [brand, setBrand] = useState('')
+  const [barcode, setBarcode] = useState('')
   const [category, setCategory] = useState('')
   const [countInStock, setCountInStock] = useState(0)
   const [description, setDescription] = useState('')
@@ -45,6 +46,7 @@ const ProductEditScreen = ({ match, history }) => {
         setPrice(product.price)
         setImage(product.image)
         setBrand(product.brand)
+        setBarcode(product.barcode)
         setCategory(product.category)
         setCountInStock(product.countInStock)
         setDescription(product.description)
@@ -87,6 +89,7 @@ const ProductEditScreen = ({ match, history }) => {
         category,
         description,
         countInStock,
+        barcode,
       })
     )
   }
@@ -180,6 +183,16 @@ const ProductEditScreen = ({ match, history }) => {
                 placeholder='Enter description'
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
+              ></Form.Control>
+            </Form.Group>
+
+            <Form.Group controlId='barcode'>
+              <Form.Label>Barcode</Form.Label>
+              <Form.Control
+                type='text'
+                placeholder='Enter barcode'
+                value={barcode}
+                onChange={(e) => setBarcode(e.target.value)}
               ></Form.Control>
             </Form.Group>
 
