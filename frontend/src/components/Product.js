@@ -28,7 +28,7 @@ const Product = ({ product }) => {
 
         <Card.Text className='product-price' as='h5'>${product.price}</Card.Text>
       </Card.Body>
-      <BarcodeGenerator />
+      <BarcodeGenerator barcode={product.barcode} />
 
     </Card>
   )

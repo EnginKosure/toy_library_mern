@@ -2,40 +2,40 @@ import React, { useState, useEffect } from "react";
 import TextField from "@material-ui/core/TextField";
 import Barcode from "react-hooks-barcode";
 
-const BarcodeGenerator = ({ location, history }) => {
+const BarcodeGenerator = ({ location, history, barcode }) => {
     const config = {
         background: "#f5f5f5",
         marginTop: "20px",
         marginBottom: "20px",
         width: 1,
-        height: 100,
+        height: 40,
     };
 
-    const [value, setValue] = useState("https://reactjs.org");
-    const [message, setMessage] = useState(null);
+    // const [value, setValue] = useState(barcode);
+    // const [message, setMessage] = useState(null);
 
-    useEffect(
-        () => {
-            if (!value) {
-                setMessage("Please enter a value");
-            } else setMessage(null);
-        },
-        [value]
-    );
+    // useEffect(
+    //     () => {
+    //         if (!value) {
+    //             setMessage("Please enter a value");
+    //         } else setMessage(null);
+    //     },
+    //     [value]
+    // );
 
     return (
         <div className="scanner">
-            <h6>Generate Barcode</h6>
-            <TextField
+            {/* <h6>Generate Barcode</h6> */}
+            {/* <TextField
                 label="Enter value or name here"
                 value={value}
                 onChange={e => setValue(e.target.value)}
                 margin="normal"
-            />
+            /> */}
             <br />
             <br />
-            <Barcode value={value} {...config} />
-            {message && <p>{message}</p>}
+            <Barcode value={barcode} {...config} />
+            {/* {message && <p>{message}</p>} */}
         </div>
     );
 }

@@ -190,6 +190,7 @@ const ProductEditScreen = ({ match, history }) => {
               <Form.Label>Barcode</Form.Label>
               <Form.Control
                 type='text'
+                maxLength='15'
                 placeholder='Enter barcode'
                 value={barcode}
                 onChange={(e) => setBarcode(e.target.value)}
