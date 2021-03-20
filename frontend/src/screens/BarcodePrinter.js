@@ -36,6 +36,8 @@ const BarcodePrinter = ({ location, history, barcode }) => {
             <br />
             <br />
             <Barcode value={value} {...config} />
+            <Barcode value={value} {...config} />
+            <Barcode value={value} {...config} />
             { message && <p>{message}</p>}
         </div>
     );
